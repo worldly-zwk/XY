@@ -1,0 +1,207 @@
+.main {
+  background: #f2f2f8;
+  overflow: hidden; }
+  .main .hot_user {
+    background: #fff;
+    margin: 1rem 0; }
+    .main .hot_user > h2 {
+      height: 4rem;
+      line-height: 4rem;
+      font-size: 1.2rem;
+      font-weight: normal;
+      text-align: center;
+      border-bottom: 1px solid #e6e6e6; }
+    .main .hot_user .users {
+      white-space: nowrap;
+      padding: 2rem 0 1rem;
+      overflow-x: scroll; }
+      .main .hot_user .users > dl {
+        width: 33%;
+        display: inline-block;
+        height: auto; }
+        .main .hot_user .users > dl img {
+          width: 7.5rem;
+          height: 7.5rem;
+          display: block;
+          margin: 0 auto;
+          border-radius: 100%; }
+        .main .hot_user .users > dl p {
+          text-align: center; }
+        .main .hot_user .users > dl .userName {
+          height: 3rem;
+          line-height: 3rem; }
+          .main .hot_user .users > dl .userName > span {
+            font-size: 0.16rem; }
+  .main .comment {
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    overflow: hidden;
+    box-sizing: border-box; }
+    .main .comment > .title {
+      background: #fff;
+      height: 3.5rem;
+      line-height: 3.5rem;
+      display: -webkit-flex;
+      -webkit-align-items: center;
+      border-bottom: 1px solid #e6e6e6; }
+      .main .comment > .title > p {
+        height: 98%;
+        font-size: 1.4rem;
+        text-align: center;
+        -webkit-flex: 1; }
+        .main .comment > .title > p.active {
+          border-bottom: 2px solid #f0ea0c; }
+      .main .comment > .title > .division {
+        width: 2px;
+        height: 2rem;
+        background: #e6e6e6; }
+    .main .comment > .comment-section {
+      -webkit-flex: 1;
+      overflow: auto; }
+      .main .comment > .comment-section > .list-item {
+        margin-bottom: 1rem;
+        background: #fff; }
+        .main .comment > .comment-section > .list-item:last-child {
+          margin-bottom: 4rem; }
+        .main .comment > .comment-section > .list-item > .list-user {
+          padding: 1rem;
+          display: -webkit-flex;
+          -webkit-justify-content: space-between;
+          -webkit-align-items: center; }
+          .main .comment > .comment-section > .list-item > .list-user > dl {
+            display: -webkit-flex;
+            -webkit-align-items: center; }
+            .main .comment > .comment-section > .list-item > .list-user > dl img {
+              width: 3rem;
+              height: 3rem;
+              border-radius: 100%; }
+            .main .comment > .comment-section > .list-item > .list-user > dl dd {
+              margin-left: 1.3rem; }
+          .main .comment > .comment-section > .list-item > .list-user > .btn {
+            width: 4.6rem;
+            height: 1.8rem;
+            line-height: 1.8rem;
+            text-align: center;
+            border: 1px solid #3e3a39;
+            border-radius: 3px; }
+        .main .comment > .comment-section > .list-item > .list-describe {
+          padding: 0 1rem;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          margin-bottom: 2rem;
+          white-space: pre-wrap; }
+        .main .comment > .comment-section > .list-item > .list-title {
+          padding-left: 1rem;
+          line-height: 3rem;
+          color: #f00; }
+        .main .comment > .comment-section > .list-item > .list-img {
+          width: 100%;
+          height: auto;
+          margin: 2rem 0; }
+        .main .comment > .comment-section > .list-item > .swiper-container {
+          margin-bottom: 1rem;
+          position: relative; }
+          .main .comment > .comment-section > .list-item > .swiper-container .tag {
+            position: absolute;
+            display: -webkit-flex;
+            z-index: 2; }
+            .main .comment > .comment-section > .list-item > .swiper-container .tag.tag-right {
+              -webkit-flex-direction: row-reverse; }
+              .main .comment > .comment-section > .list-item > .swiper-container .tag.tag-right span::before {
+                left: auto;
+                right: 12px;
+                border-color: transparent;
+                border-left: 7px solid rgba(0, 0, 0, 0.8); }
+            .main .comment > .comment-section > .list-item > .swiper-container .tag span {
+              background: rgba(0, 0, 0, 0.8);
+              padding: 0 0.5rem;
+              max-width: 145px;
+              height: 20px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              font-size: 10px;
+              color: #fff;
+              margin: 0 0.6rem 0 1rem; }
+              .main .comment > .comment-section > .list-item > .swiper-container .tag span::before {
+                content: "";
+                position: absolute;
+                top: 6px;
+                left: 21px;
+                border: 4px solid transparent;
+                border-right: 7px solid rgba(0, 0, 0, 0.8); }
+            .main .comment > .comment-section > .list-item > .swiper-container .tag .circular {
+              width: 20px;
+              height: 20px;
+              position: relative; }
+            .main .comment > .comment-section > .list-item > .swiper-container .tag .circular div {
+              width: 10px;
+              height: 10px;
+              background: #fff;
+              border-radius: 100%;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              margin: -5px 0 0 -5px; }
+            .main .comment > .comment-section > .list-item > .swiper-container .tag .circular div:nth-child(2) {
+              background: #000;
+              -webkit-animation: circular 1s forwards infinite; }
+@-webkit-keyframes circular {
+  0% {
+    -webkit-transform: scale(1); }
+  20% {
+    -webkit-transform: scale(2);
+    opacity: 0.5; }
+  30% {
+    -webkit-transform: scale(1.5);
+    opacity: 1; }
+  75% {
+    -webkit-transform: scale(2);
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+        .main .comment > .comment-section > .list-item > .list-product {
+          min-width: 100%;
+          box-sizing: border-box;
+          height: 11rem;
+          white-space: nowrap;
+          padding: 0 2rem 2rem 0;
+          overflow: hidden;
+          overflow-x: scroll;
+          -webkit-overflow-scrolling: touch;
+          border-bottom: 1px solid #ccc; }
+          .main .comment > .comment-section > .list-item > .list-product > dl {
+            width: 80%;
+            height: auto;
+            border: 2px solid #000;
+            display: -webkit-inline-flex;
+            padding: 1rem;
+            margin-left: 2rem; }
+            .main .comment > .comment-section > .list-item > .list-product > dl img {
+              width: 6.5rem;
+              height: 6.5rem;
+              margin-right: 1rem; }
+            .main .comment > .comment-section > .list-item > .list-product > dl > dd {
+              -webkit-flex: 1;
+              margin-left: 1rem; }
+              .main .comment > .comment-section > .list-item > .list-product > dl > dd .list-product-title {
+                color: #000;
+                display: -webkit-box;
+                white-space: normal;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden; }
+              .main .comment > .comment-section > .list-item > .list-product > dl > dd .list-product-price {
+                color: #f00; }
+        .main .comment > .comment-section > .list-item > .list-option {
+          height: 4.5rem;
+          line-height: 4.5rem;
+          padding-left: 2rem; }
+          .main .comment > .comment-section > .list-item > .list-option > .size {
+            font-size: 2rem; }
+
+/*# sourceMappingURL=theSun.css.map */

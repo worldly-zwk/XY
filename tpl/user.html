@@ -1,0 +1,33 @@
+<header class="header">
+    <span class="icon iconfont icon-jiantou" ui-sref="public.theSun"></span>
+    <strong>{{data.user_info.user_name}}</strong>
+</header>
+<main class="main">
+    <section class="section user-section">
+        <div class="user_info">
+            <img ng-src="{{data.user_info.user_head}}" alt="">
+            <p class="user_name">{{data.user_info.user_name}}</p>
+            <p class="user_follow" ng-click="fnBtn(data.user_info)">{{follow}}</p>
+            <nav class="user_nav">
+                <p class="bask_info_sum"><span>{{data.bask_info_sum}}</span>
+                    晒物</p>
+                <div class="user_division"></div>
+                <p class="praise_sum"><span>{{data.praise_sum}}</span>
+                    赞</p>
+                <div class="user_division"></div>
+                <p class="follow_sum"><span>{{data.follow_sum}}</span>
+                    粉丝</p>
+            </nav>
+        </div>
+        <div class="comment">
+            <div class="title">
+                <p ng-click="fn($event,'comment')" class="active">晒过</p>
+                <div class="division"></div>
+                <p ng-click="fn($event,'zan')">赞过</p>
+            </div>
+            <div class="comment-section usr-section">
+                <div class="image-item" ng-repeat="item in data.list"><img ng-src="{{item.images[0].img}}" alt="" ></div>
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,87 @@
+<header class="header">
+    <span class="icon iconfont icon-jiantou" ui-sref="public.theSun"></span>
+    <strong>晒物详情</strong>
+    <span class="icon iconfont icon-fenxiang" id="share-alert"></span>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="comment">
+            <div class="comment-section">
+                <div class="list-item">
+                    <div class="list-user">
+                        <dl ui-sref="public.user">
+                            <dt><img ng-src="{{data.data.user_head}}" alt=""></dt>
+                            <dd>
+                                <p>{{data.data.user_name}}</p>
+                                <time>{{data.data.ctime}}</time>
+                            </dd>
+                        </dl>
+                        <p class="btn" ng-click="fn(data.data)">{{follow}}</p>
+                    </div>
+                    <p class="details-list-describe">{{data.data.msg_content}}</p>
+                    <div class="theSun-details-imamgs">
+                        <img ng-src="{{item.img}}" ng-repeat="item in data.data.images">
+                    </div>
+                    <div class="list-product" ng-show="{{data.data.goods_list.length}}">
+                        <dl ng-repeat="item in data.data.goods_list">
+                            <dt><img ng-src="{{item.goods_img}}"></dt>
+                            <dd>
+                                <p class="list-product-title">{{item.goods_name}}</p>
+
+                                <p class="list-product-price">{{item.goods_price | currency :"￥"}}</p>
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <div class="list-zan-cnt" ng-show="data.praise_info.length">
+                        <div><i class="icon iconfont icon-zan size"><span>{{data.data.zan_cnt}}</span></i></div>
+                        <div class="user" ng-repeat="item in data.praise_info"><img ng-src="{{item.user_head}}"  ui-sref="public.user"></div>
+                    </div>
+                    <div class="theSun-details-list">
+                        <p>全部评论&nbsp;{{data.data.comment_cnt}}</p>
+                        <dl ng-repeat="item in data.list">
+                            <dt><img ng-src="{{item.user_head}}" alt=""></dt>
+                            <dd>
+                                <p><time>{{item.ctime}}</time>{{item.user_name}}</p>
+                                <div class="to">
+                                    <p>{{item.to_user_name}}</p>
+                                    <p>{{item.to_reply_content}}</p>
+                                </div>
+                                <p class="br">{{item.msg_content}}</p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<div class="theSun-discuss">
+    <input type="text" name="" id="" placeholder="评论">
+    <p>评论</p>
+    <i class="icon iconfont icon-zan size"></i>
+</div>
+<div class="theSun-details-mark">
+    <div class="details-mark-box">
+        <p>分享到</p>
+        <div class="details-mark-dls">
+            <dl>
+                <dt></dt>
+                <dd>微信</dd>
+            </dl>
+            <dl>
+                <dt></dt>
+                <dd>微信朋友圈</dd>
+            </dl>
+            <dl>
+                <dt></dt>
+                <dd>微博</dd>
+            </dl>
+            <dl>
+                <dt></dt>
+                <dd>QQ</dd>
+            </dl>
+        </div>
+        <div class="details-mark-btn">取消</div>
+    </div>
+</div>

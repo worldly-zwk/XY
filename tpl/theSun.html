@@ -1,0 +1,24 @@
+<header class="header">
+    <span class="" ui-sref="public.user">我的</span>
+    <strong>STYLE</strong>
+    <span class="icon iconfont icon-gouwu_icon"></span>
+</header>
+<main class="main">
+    <section class="section">
+        <div swiper-directive data="data.top_cover" auto="2000"></div>
+        <div class="hot_user">
+            <h2>热门用户</h2>
+            <div users-directive data="data.popular_users"></div>
+        </div>
+        <div class="comment">
+            <div class="title">
+                <p ng-click="fn($event,'Newest')" class="active">最新</p>
+                <div class="division"></div>
+                <p ng-click="fn($event,'follow')">关注</p>
+            </div>
+            <div class="comment-section">
+                <div list-directive data="item" ng-repeat="item in data.data"></div>
+            </div>
+        </div>
+    </section>
+</main>

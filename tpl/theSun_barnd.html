@@ -1,0 +1,26 @@
+<header class="header" >
+    <span class="icon iconfont icon-jiantou" ui-sref="public.theSun"></span>
+    <strong>{{data.topic[0].title}}</strong>
+    <span class="icon iconfont icon-fenxiang"></span>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="theSun_barnd_topic">
+            <img ng-src="{{data.topic[0].detail_img}}" class="theSun_barnd_topic_img">
+            <div class="theSun_barnd_topic_desc">{{data.topic[0].desc}}</div>
+            <div class="theSun_barnd_topic_down" ng-click="fn($event)"><span class="span_down"></span></div>
+        </div>
+        <div class="comment">
+            <div class="title">
+                <p ng-click="order($event,'utime')" class="active">最新</p>
+                <div class="division"></div>
+                <p ng-click="order($event,'zan_cnt')">最热</p>
+                <div class="division"></div>
+                <p ng-click="order($event,'comment_cnt')">编辑精选</p>
+            </div>
+            <div class="comment-section">
+                <div list-directive data="item" ng-repeat="item in data.list |orderBy :orderBy"></div>
+            </div>
+        </div>
+    </section>
+</main>

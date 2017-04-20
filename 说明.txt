@@ -1,0 +1,13 @@
+
+
+     js 下放 js库和 js框架
+
+     lib 下放 自己的js和 配置js 路由的js
+
+     tpl 下放 所有路由的页面 
+
+    body header section footer  已经设置 在 myCommon.css中 
+
+
+     注：  首页 发现 聊天 圈子 我的 这些页面 直接放在com文件夹里就可以 
+ 
